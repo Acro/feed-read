@@ -178,6 +178,7 @@ FeedRead.rss = function(xml, source, callback) {
           , content:   scrub_html(child_data(art, "content:encoded"))
                     || scrub_html(child_data(art, "description"))
           , published: child_data(art, "pubDate")
+          , comments:  child_data(art, "comments")
           , author:    child_data(art, "author")
                     || child_data(art, "dc:creator")
           , link:      child_data(art, "link")
